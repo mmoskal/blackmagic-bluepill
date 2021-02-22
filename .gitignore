@@ -1,0 +1,13 @@
+*.b#?
+*.s#?
+*.l#?
+*.pro
+*.job
+*.bga
+~$*
+*.mnb
+*.mnt
+*.sch.net
+*.sch.final.net
+*.sch.sim
+*.sch.sim.proc.log
