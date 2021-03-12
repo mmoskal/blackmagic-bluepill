@@ -1,10 +1,70 @@
 # blackmagic-bluepill
 
+This repo contains instructions needed to turn a [Bluepill board](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html)
+into a [Black Magic Probe](https://github.com/blacksphere/blackmagic/wiki) debugger.
+Black Magic Probe (BMP) runs a GDB server on the debug probe itself which allows for programming and debugging.
+I've had best luck with connecting to targets under periodic sleep with BMP compared to openocd or pyocd.
+
+The `dist/` folders contains binary builds of the BMP firmware.
+The following changes have been applied, compared to `PROBE_HOST=stlink` default configuration:
+* the SWDIO pin has been moved from PB14 to PB0
+* the LED pin has been moved to PC13 (where the LED is on the Bluepill)
+* the probe will assert target RESET signal on boot; this way the Bluepill reset button will reset both the probe and the target
+* the Vref can be connected to PA0 without voltage divider
+* [a fix for detection of STM32F0](https://github.com/blacksphere/blackmagic/pull/836) is merged
+
+You can flash the firmware using STLINK/V2 and the following command:
+
+```
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c 'program blackmagic_all.bin verify reset exit 0x08000000'
+```
+
+You can also use some STLINK GUI application, or any other methods for flashing.
+
+## Pinout
+
+The basic SWD pinout follows.
+
+|Pin |Function| Comments
+|----|--------| ------------
+|PB0 |SWDIO   | Required
+|PA5 |SWCLK   | Required
+|PB1 |RESET   | Optional - can be connected to NRST line of target
+|PA10|SWO     | Optional - SWO is for logging, but is rarely used
+|PA0 |Vref    | Optional - prints out target voltage on startup
+|PC13|LED     | LED already connected on the Bluepill
+
+The Bluepill will also act as a USB-Serial adapter (on the higher-numbered serial port).
+
+|Pin |Function|
+|----|--------|
+|PA3 |RX      |
+|PA2 |TX      |
+
+If you want to use JTAG, here are the connections (but I have not tested these).
+
+|Pin |Function|
+|----|--------|
+|PB0 |TMS     |
+|PA7 |TDI     |
+|PA6 |TDO     |
+|PA5 |TCK     |
+
+## Bluepill-BMP shield
+
+If you don't feel like breadboarding the pinout above,
+the `eagle/` folder contains design files for a shield with 2x5pin 50mil Cortex debug connector,
+a switch for powering the target, and a reset button for the target.
+It also lets you optionally use pin 5 of the Cortex debug connector as RESET line,
+so you can use [this cute little debug connector](https://arcade.makecode.com/hardware/dbg).
+The Gerber files are also included.
+
+
 ## License
 
 The Black Magic Probe firmware https://github.com/blacksphere/blackmagic
 is licensed under GPL v3.
-See https://github.com/mmoskal/blackmagic for the patches applied.
+See https://github.com/mmoskal/blackmagic/tree/bluepill for the patches applied.
 
 The Eagle files contain parts based on ones from 
 * SparkFun Eagle Libraries https://github.com/sparkfun/SparkFun-Eagle-Libraries licensed under CC-SA-4.0
