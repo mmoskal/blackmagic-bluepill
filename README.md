@@ -16,8 +16,13 @@ The following changes have been applied, compared to `PROBE_HOST=stlink` default
 You can flash the firmware using STLINK/V2 and the following command:
 
 ```
-openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c 'program blackmagic_all.bin verify reset exit 0x08000000'
+openocd -c 'set FLASH_SIZE 0x20000' -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c 'program dist/blackmagic_all.bin verify reset exit 0x08000000'
 ```
+
+Many Bluepill boards announce 64KB, which is not enough for BMP.
+The command above force-configures flash size to be 128KB
+(the STM32F103C8 parts typically have 128KB but the upper half may be defective or not tested).
+The command also verifies if the flash was written correctly - in case you get an error there, get a different Bluepill.
 
 You can also use some STLINK GUI application, or any other methods for flashing.
 
@@ -59,6 +64,7 @@ It also lets you optionally use pin 5 of the Cortex debug connector as RESET lin
 so you can use [this cute little debug connector](https://arcade.makecode.com/hardware/dbg).
 The Gerber files are also included.
 
+(This shield is why I do not use the `swlink` BMP target)
 
 ## License
 
