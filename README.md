@@ -1,4 +1,6 @@
-# blackmagic-bluepill
+![Image of Bluepill used as a BMP debugger](img/bluepill-in-action.jpg)
+
+# BMP firmware for Bluepill
 
 This repo contains instructions needed to turn a [Bluepill board](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html)
 into a [Black Magic Probe](https://github.com/blacksphere/blackmagic/wiki) debugger.
