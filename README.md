@@ -13,7 +13,6 @@ The following changes have been applied, compared to `PROBE_HOST=stlink` default
 * the LED pin has been moved to PC13 (where the LED is on the Bluepill)
 * the probe will assert target RESET signal on boot; this way the Bluepill reset button will reset both the probe and the target
 * the Vref can be connected to PA0 without voltage divider
-* [a fix for detection of STM32F0](https://github.com/blacksphere/blackmagic/pull/836) is merged
 
 You can flash the firmware using STLINK/V2 and the following command:
 
@@ -72,7 +71,9 @@ The Gerber files are also included.
 
 The Black Magic Probe firmware https://github.com/blacksphere/blackmagic
 is licensed under GPL v3.
-See https://github.com/mmoskal/blackmagic/tree/bluepill for the patches applied.
+See https://github.com/mmoskal/blackmagic/tree/bluepill for the
+[patches applied](https://github.com/blacksphere/blackmagic/compare/master...mmoskal:bluepill?expand=1);
+to build use `make PROBE_HOST=stlink BLUEPILL=1`
 
 The Eagle files contain parts based on ones from 
 * SparkFun Eagle Libraries https://github.com/sparkfun/SparkFun-Eagle-Libraries licensed under CC-SA-4.0
