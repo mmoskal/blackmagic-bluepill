@@ -20,6 +20,8 @@ You can flash the firmware using STLINK/V2 and the following command:
 openocd -c 'set FLASH_SIZE 0x20000' -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c 'program dist/blackmagic_all.bin verify reset exit 0x08000000'
 ```
 
+You can also just run `./flash.sh` which does the same.
+
 Many Bluepill boards announce 64KB, which is not enough for BMP.
 The command above force-configures flash size to be 128KB
 (the STM32F103C8 parts typically have 128KB but the upper half may be defective or not tested).
