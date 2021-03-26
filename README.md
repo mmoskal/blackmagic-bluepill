@@ -62,6 +62,8 @@ To use the debugger with [Hack-Connect-XS](https://arcade.makecode.com/hardware/
 follow the [guide to build breakout cable](https://arcade.makecode.com/hardware/dbg#breakout-cable)
 and then connect to Bluepill as indicated above.
 
+![Bluepill BMP shield assembled](img/bluepill-bmp-shield.jpg)
+
 ## Bluepill-BMP shield
 
 If you don't feel like breadboarding the pinout above,
