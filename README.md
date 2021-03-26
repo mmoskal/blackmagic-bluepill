@@ -58,14 +58,21 @@ If you want to use JTAG, here are the connections (but I have not tested these).
 |PA6 |TDO     |
 |PA5 |TCK     |
 
+To use the debugger with [Hack-Connect-XS](https://arcade.makecode.com/hardware/dbg)
+follow the [guide to build breakout cable](https://arcade.makecode.com/hardware/dbg#breakout-cable)
+and then connect to Bluepill as indicated above.
+
 ## Bluepill-BMP shield
 
 If you don't feel like breadboarding the pinout above,
 the `eagle/` folder contains design files for a shield with 2x5pin 50mil Cortex debug connector,
 a switch for powering the target, and a reset button for the target.
-It also lets you optionally use pin 5 of the Cortex debug connector as RESET line,
-so you can use [this cute little debug connector](https://arcade.makecode.com/hardware/dbg).
 The Gerber files are also included.
+
+It also lets you optionally use pin 5 of the Cortex debug connector as RESET line,
+so you can use Hack-Connect-XS without any cable slicing - once you set the jumper into HC-XS position,
+just use a regular 2x5pin IDC cable, with
+[the male header inserted on target side](https://arcade.makecode.com/hardware/dbg#target-end).
 
 (This shield is why I do not use the `swlink` BMP target)
 
