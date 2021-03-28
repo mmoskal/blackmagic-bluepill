@@ -29,6 +29,12 @@ The command also verifies if the flash was written correctly - in case you get a
 
 You can also use some STLINK GUI application, or any other methods for flashing.
 
+## Getting Bluepill board
+
+These are easily available on Amazon, Ebay, Aliexpress, etc. Search for `STM32F103C8T6`.
+If you don't have a ST-LINK/V2 (clone), then get one as well (they often come together with Bluepills),
+so you can re-program your Bluepill.
+
 ## Pinout
 
 The basic SWD pinout follows.

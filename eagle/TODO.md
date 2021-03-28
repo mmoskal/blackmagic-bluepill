@@ -5,3 +5,4 @@
 * LEDs are not very well visible
 * use smaller holes in the long header (to align with 3pin headers)
 * not enough space to move BOOT jumpers
+* should the power line be connected to A0? it seem to power the probe even with power switch off
