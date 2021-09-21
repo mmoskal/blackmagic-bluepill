@@ -705,12 +705,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="PROD_ID" value="CONN-11563" x="25.4" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="26.67" y="19.812" size="0.6096" layer="27" font="vector" ratio="20" rot="R180"/>
 </element>
-<element name="SW-3V" library="pcnt" package="SWITCH_DPDT_SMD_AYZ0202" value="" x="13.5636" y="12.8524" smashed="yes" rot="R180">
+<element name="SW-3V" library="pcnt" package="SWITCH_DPDT_SMD_AYZ0202" value="C115375" x="13.5636" y="12.8524" smashed="yes" rot="R180">
 <attribute name="NAME" x="13.5636" y="12.5624" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value="SWCH-08179" x="13.5636" y="12.8524" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SF_ID" value="COM-00597" x="13.5636" y="12.8524" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="SW-RST" library="mb-arcade-shield" package="TACTILE_SWITCH_SMD_6.0X3.5MM" value="MOMENTARY-SWITCH-SPST-SMD-6.0X3.5MM" x="5.969" y="11.6332" smashed="yes" rot="R270">
+<element name="SW-RST" library="mb-arcade-shield" package="TACTILE_SWITCH_SMD_6.0X3.5MM" value="C255816" x="5.969" y="11.6332" smashed="yes" rot="R270">
 <attribute name="NAME" x="7.112" y="11.6332" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="SWCH-00815" x="5.969" y="17.1196" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SF_SKU" value="COM-08229" x="5.969" y="17.1196" size="1.778" layer="27" rot="R270" display="off"/>
@@ -720,12 +720,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="24.13" y="3.3274" size="0.6096" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="25.0444" y="3.8608" size="0.6096" layer="27" font="vector" ratio="20" rot="R180"/>
 </element>
-<element name="SWD1" library="pcnt" package="1X05_SMALLHOLE" value="" x="31.3182" y="17.8282" smashed="yes" rot="R270"/>
+<element name="SWD1" library="pcnt" package="1X05_SMALLHOLE" value="C124405" x="31.3182" y="17.8282" smashed="yes" rot="R270"/>
 <element name="JMP1" library="pcnt" package="1X03_NO_SILK" value="" x="19.9644" y="12.0396" smashed="yes" rot="R270">
 <attribute name="NAME" x="18.4658" y="12.7" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
 <attribute name="VALUE" x="17.9324" y="13.3096" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="SWD2" library="pcnt" package="JST04_1MM_RA" value="4P JST-SH" x="13.2588" y="5.4864" smashed="yes">
+<element name="SWD2" library="pcnt" package="JST04_1MM_RA" value="4P JST-SH C145956" x="13.2588" y="5.4864" smashed="yes">
 <attribute name="NAME" x="11.8618" y="3.3274" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="PROD_ID" value="CONN-10310" x="13.2588" y="5.4864" size="1.778" layer="27" display="off"/>
 <attribute name="SF_ID" value="PRT-10208" x="13.2588" y="5.4864" size="1.778" layer="27" display="off"/>
