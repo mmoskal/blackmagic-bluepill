@@ -70,6 +70,7 @@ and then connect to Bluepill as indicated above.
 
 ![Bluepill BMP shield assembled](img/bluepill-bmp-shield.jpg)
 
+
 ## Bluepill-BMP shield
 
 If you don't feel like breadboarding the pinout above,
@@ -83,6 +84,12 @@ just use a regular 2x5pin IDC cable, with
 [the male header inserted on target side](https://arcade.makecode.com/hardware/dbg#target-end).
 
 (This shield is why I do not use the `swlink` BMP target)
+
+Note that the `RX`/`TX` pins on the shield are meant to solder a header pointing away from the Bluepill
+(see picture below).
+You can connect an external serial port to it, and see it as one of the BMP serial ports.
+
+![Bluepill BMP shield side view](img/bluepill-bmp-shield-side.jpg)
 
 ## License
 
