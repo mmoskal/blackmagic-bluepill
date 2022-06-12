@@ -14,7 +14,8 @@ The following changes have been applied, compared to `PROBE_HOST=stlink` default
 * the probe will assert target RESET signal on boot; this way the Bluepill reset button will reset both the probe and the target
 * the Vref can be connected to PA0 without voltage divider
 
-You can flash the firmware using STLINK/V2 and the following command:
+The file `dist/blackmagic_all.bin` needs to be flashed at `0x08000000` (beginning of flash).
+This can be done using STLINK/V2 hardware and the following command:
 
 ```
 openocd -c 'set FLASH_SIZE 0x20000' -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c 'program dist/blackmagic_all.bin verify reset exit 0x08000000'
