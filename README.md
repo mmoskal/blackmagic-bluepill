@@ -65,9 +65,39 @@ If you want to use JTAG, here are the connections (but I have not tested these).
 |PA6 |TDO     |
 |PA5 |TCK     |
 
-To use the debugger with [Hack-Connect-XS](https://arcade.makecode.com/hardware/dbg)
-follow the [guide to build breakout cable](https://arcade.makecode.com/hardware/dbg#breakout-cable)
-and then connect to Bluepill as indicated above.
+## Hack-Connect XS cable
+
+You can solder a Cortex-M debug cable (10 pin 0.05 inch pitch IDC cable; 8 or 6 pin will work as well)
+to a Blue Pill directly and use [Hack-Connect-XS](https://arcade.makecode.com/hardware/dbg).
+
+![Cutting Cortex-M debug cable](img/cable.jpg)
+
+First cut one end of the cable (see picture above to determine which one) and split the first 5 wires.
+Wire number 1 is red.
+Strip isolation from the 5 wires, and cut away the remaining 5 wires.
+Keep the GND and VCC wires about 15mm longer.
+
+![Soldering debug cable to Blue Pill](img/soldering.jpg)
+
+Next, connect a female jumper cable to VCC wire - you can either twist them together or solder (don't forget to isolate after connecting!).
+You can later connect it to VCC pin of the Blue Pill (on its debug header) to power the target when needed.
+Then solder the remaining wires to Blue Pill as indicated in the picture above.
+Wrap the whole thing in electrical tape for cable strain relief.
+
+![50mil header preparation](img/header.jpg)
+
+Next, cut 6 pins from a 0.05 inch dual row male header.
+You may want to cut 8 pins and remove the excessive pins (the plastic often breaks at the pin boundary).
+Remove one pin, as indicated.
+Finally, remove excessive plastic.
+
+![Glueing header to connector](img/glue.jpg)
+
+Now, insert the header into the connector, aligning the left side with the red wire.
+There should be 3 pins on the outer edge and 2 on the inner.
+You can test your cable now, before gluing - the header will likely stay in PCB when you pull out the cable, which is why we’re glueing.
+After testing, pull out the header out slightly (around 1mm), put a drop of glue in the gap, and then press the connector back in.
+Leave it to dry for a few minutes (it will stick to PCB if it doesn’t dry!).
 
 ![Bluepill BMP shield assembled](img/bluepill-bmp-shield.jpg)
 
