@@ -127,7 +127,7 @@ You can connect an external serial port to it, and see it as one of the BMP seri
 The Black Magic Probe firmware https://github.com/blacksphere/blackmagic
 is licensed under GPL v3.
 See https://github.com/mmoskal/blackmagic/tree/bluepill for the
-[patches applied](https://github.com/blacksphere/blackmagic/compare/master...mmoskal:bluepill?expand=1);
+[patches applied](https://github.com/blackmagic-debug/blackmagic/compare/main...mmoskal:blackmagic:bluepill);
 to build use `make PROBE_HOST=stlink BLUEPILL=1`
 
 The Eagle files contain parts based on ones from 
