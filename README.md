@@ -13,6 +13,7 @@ The following changes have been applied, compared to `PROBE_HOST=stlink` default
 * the LED pin has been moved to PC13 (where the LED is on the Bluepill)
 * the probe will assert target RESET signal on boot; this way the Bluepill reset button will reset both the probe and the target
 * the Vref can be connected to PA0 without voltage divider
+* disable Debug-in-STOP-mode registers - these cause trouble in my experience; it's possible this is now fixed in upstream bluepill
 
 The file `dist/blackmagic_all.bin` needs to be flashed at `0x08000000` (beginning of flash).
 This can be done using STLINK/V2 hardware and the following command:
